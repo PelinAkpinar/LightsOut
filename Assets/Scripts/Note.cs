@@ -9,25 +9,20 @@ public class Note : MonoBehaviour
     public Image noteImage;
     public GameObject hideNoteButton;
     public GameObject playerObject;
-    //public GameObject cameraObject;
-    // Start is called before the first frame update
+    
     void Start()
     {
         noteImage.enabled = false;
         hideNoteButton.SetActive(false);
-       // playerObject.SetActive(true);
-        
-
     }
-
-    // Update is called once per frame
+    
     public void ShowNoteImage()
     {
       noteImage.enabled = true;
         hideNoteButton.SetActive(true);
         playerObject.SetActive(false);
         //playerObject.GetComponent<PlayerController>().enabled = false;
-       // playerObject.GetComponent<camMouseLook>().enabled= false;
+       
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         
@@ -41,6 +36,6 @@ public class Note : MonoBehaviour
         Cursor.visible = false;
        playerObject.SetActive(true);
       // playerObject.GetComponent<PlayerController>().enabled = true;
-        //playerObject.GetComponent<camMouseLook>().enabled = true;
+        
     }
 }
