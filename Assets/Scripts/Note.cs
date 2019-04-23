@@ -15,6 +15,8 @@ public class Note : MonoBehaviour
     {
         noteImage.enabled = false;
         hideNoteButton.SetActive(false);
+       // playerObject.SetActive(true);
+        
 
     }
 
@@ -23,7 +25,8 @@ public class Note : MonoBehaviour
     {
       noteImage.enabled = true;
         hideNoteButton.SetActive(true);
-      playerObject.GetComponent<PlayerController>().enabled = false;
+        playerObject.SetActive(false);
+        //playerObject.GetComponent<PlayerController>().enabled = false;
        // playerObject.GetComponent<camMouseLook>().enabled= false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -33,11 +36,11 @@ public class Note : MonoBehaviour
     public void HideNoteImage()
     {
         noteImage.enabled = false;
-        hideNoteButton.SetActive(false);
+       hideNoteButton.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
-       playerObject.GetComponent<PlayerController>().enabled = true;
+       playerObject.SetActive(true);
+      // playerObject.GetComponent<PlayerController>().enabled = true;
         //playerObject.GetComponent<camMouseLook>().enabled = true;
     }
 }

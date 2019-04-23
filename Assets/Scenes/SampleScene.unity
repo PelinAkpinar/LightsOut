@@ -1443,7 +1443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 2114281302}
   hideNoteButton: {fileID: 1892144061}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!64 &670556212
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 539881241}
   hideNoteButton: {fileID: 1485553590}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!64 &860742953
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 1198268157}
   hideNoteButton: {fileID: 31895695}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!1 &996115503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 446593222}
   hideNoteButton: {fileID: 1256425088}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!64 &1186006451
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3406,7 +3406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 1679013536}
   hideNoteButton: {fileID: 2097238353}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!64 &2003816981
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3648,7 +3648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteImage: {fileID: 1698104178}
   hideNoteButton: {fileID: 2051777491}
-  playerObject: {fileID: 291525144}
+  playerObject: {fileID: 1774699205}
 --- !u!64 &2072203062
 MeshCollider:
   m_ObjectHideFlags: 0
