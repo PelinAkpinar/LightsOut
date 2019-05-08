@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float walkSpeed;
-
     Rigidbody rb;
     Vector3 moveDirection;
     // Start is called before the first frame update

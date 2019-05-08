@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Interact : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,9 +16,11 @@ public class Interact : MonoBehaviour
     public Image interactIcon;
 
     public bool isInteracting;
-
+   
+   
     void Start()
     {
+        
         if(interactIcon != null)
         {
         interactIcon.enabled = false;
@@ -46,8 +49,19 @@ public class Interact : MonoBehaviour
                     if(hit.collider.CompareTag("Note"))
                     {
                         hit.collider.GetComponent<Note>().ShowNoteImage();
+        
                     }
+                    if(hit.collider.CompareTag("Mark"))
+                    {
+                     
+                            hit.collider.GetComponent<Markable>().changeTexture();
                    
+                    }
+                    if (hit.collider.CompareTag("DoorTrigger"))
+                    {
+                        hit.collider.GetComponent<DoorTrigger>().openDoor();
+                    }
+
                 }
             }
         }

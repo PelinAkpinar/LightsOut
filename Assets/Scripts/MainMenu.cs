@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(levelName);
 
+
     }
 
     public void Quit()

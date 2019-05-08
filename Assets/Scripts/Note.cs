@@ -10,8 +10,8 @@ public class Note : MonoBehaviour
     public AudioClip putDown;
     public Image noteImage;
     public GameObject hideNoteButton;
-    public GameObject playerObject;
     public GameObject noteObject;
+    public GameObject cameraObject;
 
     void Start()
     {
@@ -21,15 +21,16 @@ public class Note : MonoBehaviour
     
     public void ShowNoteImage()
     {
-        GetComponent<AudioSource>().PlayOneShot(pickUp);
-      noteImage.enabled = true;
+       GetComponent<AudioSource>().PlayOneShot(pickUp);
+       noteImage.enabled = true;
        
-        hideNoteButton.SetActive(true);
-        playerObject.SetActive(false);
-        //playerObject.GetComponent<PlayerController>().enabled = false;
+       hideNoteButton.SetActive(true);
+       //cameraObject.SetActive(false);
+      
        
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+        
         
     }
 
@@ -38,11 +39,12 @@ public class Note : MonoBehaviour
        
        
         noteImage.enabled = false;
-         GetComponent<AudioSource>().PlayOneShot(putDown);
+        GetComponent<AudioSource>().PlayOneShot(putDown);
         hideNoteButton.SetActive(false);
+       // cameraObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-       playerObject.SetActive(true);
+        
         noteObject.SetActive(false);
        
       // playerObject.GetComponent<PlayerController>().enabled = true;

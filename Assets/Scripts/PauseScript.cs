@@ -5,15 +5,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour
 {
-    GameObject pauseMenu;
-    
+    string levelName = "Scene_Menu";
     bool paused;
     
     // Start is called before the first frame update
     void Start()
     {
         paused = false;
-        pauseMenu = GameObject.Find("pauseMenu");
+      
        
     }
 
@@ -26,23 +25,17 @@ public class PauseScript : MonoBehaviour
         }
         if(paused==true)
         {
-            
-            pauseMenu.SetActive(true);
-           
-            Time.timeScale = 0;
-            
+
+            SceneManager.LoadScene(levelName);
+           // Cursor.lockState = CursorLockMode.None;
+            //Cursor.visible = true;
+
         }
-        else if (paused==false)
-        {
-            
-            pauseMenu.SetActive(false);
-           
-            Time.timeScale = 1;
-        }
+        
        
     }
 
-    public void Resume()
+  /*  public void Resume()
     {
         paused = false;
     }
@@ -51,5 +44,5 @@ public class PauseScript : MonoBehaviour
     {
         SceneManager.LoadScene("Scene_Menu");
     }
-
+    */
 }
