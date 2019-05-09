@@ -21,13 +21,13 @@ public class Interact : MonoBehaviour
 
     public int playTime;
 
-    public GameObject mazeFloor;
+    public GameObject finishTable;
     
 
     void Start()
     {
         videoPlayer.SetActive(false);
-        mazeFloor.SetActive(true);
+        finishTable.SetActive(true);
         
         if (interactIcon != null)
         {
@@ -53,16 +53,14 @@ public class Interact : MonoBehaviour
                 
                 if(hit.collider.CompareTag("Finish"))
                 {
-                    mazeFloor.SetActive(false);
+                    
                     videoPlayer.SetActive(true);
+                    finishTable.SetActive(false);
 
                     Destroy(videoPlayer,playTime);
 
-                    
-                    
-
-                    Application.Quit();
                 }
+                
 
 
                 if(Input.GetButtonDown(interactButton))
@@ -91,8 +89,14 @@ public class Interact : MonoBehaviour
             interactIcon.enabled = false;
         }
        
-
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
 
     }
+
+   
+
 
 }

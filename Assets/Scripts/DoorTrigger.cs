@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
+    AudioSource audioSource;
     public GameObject door;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -21,5 +22,6 @@ public class DoorTrigger : MonoBehaviour
     {
         door.SetActive(false);
         door.isStatic = false;
+        audioSource.mute = true;
     }
 }
