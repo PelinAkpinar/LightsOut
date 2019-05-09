@@ -5,13 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour
 {
+  
     string levelName = "Scene_Menu";
-    bool paused;
+    public bool paused;
     
     // Start is called before the first frame update
     void Start()
     {
         paused = false;
+       
       
        
     }
@@ -23,26 +25,18 @@ public class PauseScript : MonoBehaviour
         {
             paused = !paused;
         }
-        if(paused==true)
+        if(paused)
         {
-
+            
             SceneManager.LoadScene(levelName);
-           // Cursor.lockState = CursorLockMode.None;
+            // Cursor.lockState = CursorLockMode.None;
             //Cursor.visible = true;
-
+            
         }
         
        
     }
 
-  /*  public void Resume()
-    {
-        paused = false;
-    }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Scene_Menu");
-    }
-    */
+
 }

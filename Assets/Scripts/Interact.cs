@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Interact : MonoBehaviour
@@ -16,12 +17,19 @@ public class Interact : MonoBehaviour
     public Image interactIcon;
 
     public bool isInteracting;
-   
-   
+    public GameObject videoPlayer;
+
+    public int playTime;
+
+    public GameObject mazeFloor;
+    
+
     void Start()
     {
+        videoPlayer.SetActive(false);
+        mazeFloor.SetActive(true);
         
-        if(interactIcon != null)
+        if (interactIcon != null)
         {
         interactIcon.enabled = false;
         }
@@ -43,6 +51,19 @@ public class Interact : MonoBehaviour
                 interactIcon.enabled = true;
                 }
                 
+                if(hit.collider.CompareTag("Finish"))
+                {
+                    mazeFloor.SetActive(false);
+                    videoPlayer.SetActive(true);
+
+                    Destroy(videoPlayer,playTime);
+
+                    
+                    
+
+                    Application.Quit();
+                }
+
 
                 if(Input.GetButtonDown(interactButton))
                 {
